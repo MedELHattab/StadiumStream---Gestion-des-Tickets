@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto+Mono&family=Titillium+Web&display=swap');
+
+.bg-element1 {
+    background-color: #004930;
+}
+
+.titles {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+
+
+
+.navbar {
+    height: 70px;
+}
+
+.mainpage {
+    background-image: url('../images/1R_vbKDU\ \(1\).jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

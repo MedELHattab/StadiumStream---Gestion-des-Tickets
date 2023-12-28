@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link href="/dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- for carousel -->
+    <link rel="stylesheet" href="css/style2.css" />
   </head>
   <body>
-    <header >
+    <!-- Navbar  -->
+    <header>
       <nav
         class="bg-element1 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 fixed w-[100%] z-10 top-0"
       >
@@ -588,19 +590,14 @@
           <div class="flex items-center lg:order-2">
             <a
               href="../src/signin.html"
-              class="text-white dark:text-white bg-orange-400  focus:ring-4 focus:ring-gray-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              class="text-white dark:text-white bg-orange-400 focus:ring-4 focus:ring-gray-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
               >Log in</a
             >
             <a
-            href="../src/signin.html"
-            class="text-white dark:text-white bg-orange-400  focus:ring-4 focus:ring-gray-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-            >Sign up</a
-          >
-            <!-- <a
-              href="../src/signup.html"
-              class="text-gray-800 dark:text-white bg-orange-400  hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 font-bold rounded-3xl text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+              href="../src/signin.html"
+              class="text-white dark:text-white bg-orange-400 focus:ring-4 focus:ring-gray-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
               >Sign up</a
-            > -->
+            >
             <button
               aria-label="theme-toggle"
               id="theme-toggle"
@@ -675,122 +672,42 @@
             >
               <li>
                 <a
-                  href="../src/index.html"
-                  class="block py-2 pr-4 pl-3 text-primary-700 dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
-                  aria-current="page"
-                  >Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="../src/index.html"
+                  href="#1"
                   class="block py-2 pr-4 pl-3 text-primary-700 text-white dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
                   aria-current="page"
-                  >Home
+                  >ABOUT
                 </a>
               </li>
               <li>
                 <a
-                  href="../src/index.html"
-                  class="block py-2 pr-4 pl-3 text-primary-700 dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
+                  href="#1"
+                  class="block py-2 pr-4 pl-3 text-primary-700 text-white dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
                   aria-current="page"
-                  >Home
+                  >NEWS
                 </a>
               </li>
               <li>
                 <a
-                  href="../src/index.html"
-                  class="block py-2 pr-4 pl-3 text-primary-700 dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
+                  href="#1"
+                  class="block py-2 pr-4 pl-3 text-primary-700 text-white dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
                   aria-current="page"
-                  >Home
+                  >TEAMS
                 </a>
               </li>
-              
-              <!-- <li>
-                <button
-                  id="dropdownDefaultButton"
-                  data-dropdown-toggle="dropdown"
-                  class="font-bold inline-flex py-2 pr-4 pl-3 cursor-pointer  text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  type="button"
-                >
-                  Company
-                  <svg
-                    class="w-2.5 h-2.5 ml-2.5 mt-2.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-              
-                <div
-                  id="dropdown"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                >
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownDefaultButton"
-                  >
-                    <li>
-                      <a
-                        href="../src/about.html#tab-profile"
-                        class="font-bold block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Who we are</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="../src/about.html#tab-settings"
-                        class="font-bold block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Our Value System</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="../src/about.html#tab-options"
-                        class="font-bold block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Meet The Team</a
-                      >
-                    </li>
-                  </ul>
-                  <div class="py-2">
-                    <a
-                      href="../src/pricing.html"
-                      class="font-bold block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                      >Pricing</a
-                    >
-                  </div>
-                </div>
-              </li>
               <li>
                 <a
-                  href="../src/marketplace.html"
-                  class="font-bold block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >Market Place</a
-                >
+                  href="#1"
+                  class="block py-2 pr-4 pl-3 text-primary-700 text-white dark:text-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 font-bold"
+                  aria-current="page"
+                  >CONTACT
+                </a>
               </li>
-              <li>
-                <a
-                  href="../src/contact.html"
-                  class="font-bold block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >Contact</a
-                >
-              </li> -->
-
             </ul>
           </div>
         </div>
       </nav>
     </header>
-
+    <!-- / Navbar  -->
     <script src="js/darkmode.js"></script>
   </body>
 </html>

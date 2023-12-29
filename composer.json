@@ -2,13 +2,13 @@
   "name": "youcode/simple-php-mvc-starter",
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "App\\": "app/"
     }
   },
   "authors": [
     {
         "name": "Mohammed",
-        "email": "mohammedmiessal@gmail.com"
+        "email": "elhattabmohammedelarbi@gmail.com"
     }
 ],
   "require": {

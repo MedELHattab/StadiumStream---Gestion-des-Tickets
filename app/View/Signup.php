@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StadiumStream</title>
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="public/assets/dist/output.css">
 </head>
 
 <body>
@@ -130,9 +130,10 @@
                                     conditions d'utilisation </a> et la politique de confidentialité </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-y-4 items-center justify-center mt-8"><button class="bg-[#004634]  text-white font-bold py-2 px-4 border rounded" style="background-color: #004634;">
-                        S'inscrire
-                    </button></div>
+                    <div class="flex flex-col gap-y-4 items-center justify-center mt-8"><button type="submit" name="signup" class="bg-[#004634] text-white font-bold py-2 px-4 border rounded" style="background-color: #004634;">
+            S'inscrire
+        </button>
+</div>
                 </div><!---->
             </form>
         </div>

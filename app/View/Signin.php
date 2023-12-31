@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StadiumStream</title>
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="public/assets/dist/output.css">
 </head>
 
 <body>
@@ -97,7 +97,7 @@
             <div class="-full md:w-6/12 xl:w-4/12"><!----></div>
         </div>
         <div class="flex justify-center gap-4 mt-8">
-            <form class="w-full md:w-6/12 xl:w-4/12">
+        <form class="w-full md:w-6/12 xl:w-4/12" method="post" action="/signin">
                 <div class="mb-6 relative"><label for="email" class="opacity-40 org-text-primary sr-only">Email</label>
                     <div class="flex"><input id="email"
                             class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"

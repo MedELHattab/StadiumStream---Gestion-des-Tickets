@@ -4,20 +4,20 @@ namespace App\Model;
 
 use PDOException;
 
-class Signin extends Crud
+class SigninModel extends Crud
 {
     
 
-    public function authenticateUser($email, $password)
+    public function authenticateUser($AdresseEmail, $MotDePasse)
     {
         try {
           
             $tableName = "users"; 
-            $query = "SELECT * FROM $tableName WHERE email = :email AND password = :password";
+            $query = "SELECT * FROM $tableName WHERE AdresseEmail = :AdresseEmail AND MotDePasse = :MotDePasse";
 
             $stmt = $this->pdo->prepare($query);
-            $stmt->bindParam(":email", $email, \PDO::PARAM_STR);
-            $stmt->bindParam(":password", $password, \PDO::PARAM_STR);
+            $stmt->bindParam(":AdresseEmail", $AdresseEmail, \PDO::PARAM_STR);
+            $stmt->bindParam(":MotDePasse", $MotDePasse, \PDO::PARAM_STR);
             $stmt->execute();
 
             $user = $stmt->fetch(\PDO::FETCH_ASSOC);
@@ -38,3 +38,5 @@ class Signin extends Crud
         }
     }
 }
+?>
+!

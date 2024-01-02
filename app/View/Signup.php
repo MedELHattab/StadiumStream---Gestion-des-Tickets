@@ -5,11 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StadiumStream</title>
+    <meta name="keywords" content="HTML, CSS, Youcode, tailwindCSS, StadiumStream, CAN24">
+    <meta name="description" content="StadiumStream to Sell Football tickets">
+
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="stylesheet" href="public/assets/dist/output.css">
+
+    <!-- Date picker  -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker, #datepicker1").datepicker();
+        });
+    </script>
+    <!-- / Date picker  -->
+
 </head>
 
-<body>
-    <div class="hero_section flex flex-row mx-[7em] gap-x-3">
+<body class="dark:bg-gray-900">
+
+    <!-- Navbar  -->
+    <?php include "../app/View/includes/header.php"; ?>
+    <!-- Navbar  -->
+    <div class="hero_section flex flex-row mt-[4em] mx-[7em] gap-x-3">
         <div class="p-4" style="border-left: 2px solid #004634;">Inscription</div>
 
         <div class="ml-auto">
@@ -138,6 +159,13 @@
             </form>
         </div>
     </div>
+    <?php include "../app/View/includes/footer.php"; ?>
+    <!-- / Footer   -->
+    
+    <!-- / For dark mode -->
+    <script src="public/assets/js/darkmode.js"></script>
+    <!-- / For navbar mobile -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 </body>
 
 </html>

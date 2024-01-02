@@ -2,32 +2,31 @@
 
 namespace App\Controller;
 
-use App\Model\Signin; 
+use App\Model\SigninModel; 
 
 class SigninController
 {
     public function index()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signin'])) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
             
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+            $AdresseEmail = $_POST['AdresseEmail'];
+            $MotDePasse = $_POST['MotDePasse'];
 
 
-            $signinModel = new Signin();
+            $signinModel = new SigninModel();
 
-            // Call the signIn method
-            $user = $signinModel->authenticateUser($email, $password);
+            $user = $signinModel->authenticateUser($AdresseEmail, $MotDePasse);
 
-            $signinController = new self();
+            
 
             if ($user) {
 
-                header("Location: /dashboard");
+                header("Location:./users");
                 exit();
             } else {
 
-                header("Location: /signin?error=1");
+                header("Location: ./signin?error=1");
                 exit();
             }
         } else {

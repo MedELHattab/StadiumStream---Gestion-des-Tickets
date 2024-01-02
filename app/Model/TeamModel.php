@@ -7,13 +7,21 @@ use PDOException;
 
 class TeamModel extends Crud
 {
-    public function readTeams()
+    public function readTeam()
     {
-       
+        return $this->read('EquipesNationales');
     }
-
-    public function create($tableName, $data)
-    {
     
-    }
+    // public function addTeam($data)
+    // {
+    //     $tableName = 'EquipesNationales';
+
+    //     $this->create($tableName, $data);
+    // }
+    // public function deleteTeam($id)
+    // {
+    //     $tableName = 'EquipesNationales';
+    //     $this->delete($tableName, $id);
+    //     header('Location: ');
+    // }
 }

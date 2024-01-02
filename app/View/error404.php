@@ -4,21 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Found !</title>
-    <link rel="stylesheet" href="public/assets/dist/output.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="<?= URL_DIR ?>public/assets/css/404.css">
 </head>
 
-<body class="dark:bg-gray-800  bg-gray-300">
-    <div class="mt-24 flex flex-col justify-center text-center">
-        <h1 class="mb-4 text-6xl font-poppins tracking-wider font-semibold text-green-700">404</h1>
-        <p class="mb-4 text-lg font-poppins tracking-wider text-gray-600">Oops! Looks like you're lost.</p>
-        <div class="animate-bounce">
-            <svg class="mx-auto h-16 w-16 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-            </svg>
+<body>
+
+
+    <div class="error">
+
+        <div class="wrap">
+            <div class="404">
+                <pre><code>
+	 <span class="green">&lt;!</span><span>DOCTYPE html</span><span class="green">&gt;</span>
+<span class="orange">&lt;html&gt;</span>
+    <span class="orange">&lt;style&gt;</span>
+   * {
+		        <span class="green">everything</span>:<span class="blue">awesome</span>;
+}
+     <span class="orange">&lt;/style&gt;</span>
+ <span class="orange">&lt;body&gt;</span> 
+              ERROR 404!
+				FILE NOT FOUND!
+				<span class="comment">&lt;!--The file you are looking for, 
+					is not where you think it is.--&gt;
+		</span>
+ <span class="orange"></span> 
+			  
+
+
+</div>
+<br />
+<span class="info">
+<br />
+
+<span class="orange">&nbsp;&lt;/body&gt;</span>
+
+<br/>
+      <span class="orange">&lt;/html&gt;</span>
+    </code></pre>
+            </div>
         </div>
-        <p class="mt-4 font-poppins tracking-wider text-gray-600">Let's get you back <a href="home" class="text-blue-500">home</a>.</p>
-    </div>
+
+
+        </span>
+
 </body>
-<script src="public/assets/js/theme.js"></script>
+
 </html>

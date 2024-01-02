@@ -13,6 +13,23 @@ class Crud extends Connection
         parent::__construct();
     }
 
+
+    public function read($tableName)
+    {
+        try {
+            $query = "SELECT * FROM $tableName";
+            $stmt = $this->pdo->query($query);
+
+            $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $records; // Return the fetched records
+        } catch (PDOException $e) {
+            echo "Error fetching records: " . $e->getMessage();
+            return []; // Return an empty array in case of an error
+        }
+    }
+
+
     public function create($tableName, $data)
     {
         try {
@@ -29,21 +46,6 @@ class Crud extends Connection
         }
     }
 
-    public function read($tableName)
-    {
-        try {
-            $query = "SELECT * FROM $tableName";
-            $stmt = $this->pdo->query($query);
-
-            $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            return $records; // Return the fetched records
-        } catch (PDOException $e) {
-            echo "Error fetching records: " . $e->getMessage();
-            return []; // Return an empty array in case of an error
-        }
-    }
-    
     public function update($tableName, $data, $id)
     {
         try {

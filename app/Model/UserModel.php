@@ -2,84 +2,45 @@
 
 namespace App\Model;
 
+use PDO;
 use PDOException;
 
-class User extends Crud
+class UserModel extends Crud
 {
-    private int $id;
-    private string $name;
-    private string $email;
-    private int $age;
-
-    /**
-     * @param string $name
-     * @param string $email
-     * @param int $age
-     * @param int|null $id
-     */
-    public function __construct(string $name, string $email, int $age, int $id = null)
+    public function readUser()
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->email = $email;
-        $this->age = $age;
+        try {
+            $query = "SELECT users.Nom,users.AdresseEmail,roles.RoleType FROM users
+            INNER JOIN  roles 
+            ON users.RoleID = roles.RoleID
+            ;";
+            $stmt = $this->pdo->query($query);
+
+            $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $records; // Return the fetched records
+        } catch (PDOException $e) {
+            echo "Error fetching records: " . $e->getMessage();
+            return []; // Return an empty array in case of an error
+        }
     }
-
-    public function getId(): int
+    public function addUser($data)
     {
-        return $this->id;
+        $tableName = 'users';
+
+        $this->create($tableName, $data);
     }
-
-    public function setId(int $id): void
+    public function deleteTeam($id)
     {
-        $this->id = $id;
+        $tableName = 'users';
+        $this->delete($tableName, $id);
+        header('Location: ../../users');
     }
-
-    public function getName(): string
+    public function editUser($data, $id)
     {
-        return $this->name;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): void
-    {
-        $this->email = $email;
-    }
-
-    public function getAge(): int
-    {
-        return $this->age;
-    }
-
-    public function setAge(int $age): void
-    {
-        $this->age = $age;
-    }
-
-
-
-    public function updateUser($tableName, $data, $id)
-    {
-        return $this->update($tableName, $data, $id);
-    }
-
-    public function addUser($tabel, $data)
-    {
-        return $this->create($tabel, $data);
-    }
-
-    public function deleteUser($tabel, $id)
-    {
-
-        return $this->delete($tabel, $id);
+        $tableName = 'users';
+        $redirect = URL_DIR . 'users';
+        $this->update($tableName, $data, $id);
+        header("Location: $redirect");
     }
 }

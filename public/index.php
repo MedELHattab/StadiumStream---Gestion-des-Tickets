@@ -1,5 +1,5 @@
 <?php 
-define('URL_DIR', 'http://localhost/StadiumStream---Gestion-des-Tickets/');
+define('URL_DIR', 'http://localhost/stadium_stream_Test/');
 require "../vendor/autoload.php";
 require "../router/Router.php";
 

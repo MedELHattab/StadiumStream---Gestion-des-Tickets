@@ -10,7 +10,7 @@ class UserModel extends Crud
     public function readUser()
     {
         try {
-            $query = "SELECT users.Nom,users.AdresseEmail,roles.RoleType FROM users
+            $query = "SELECT * FROM users
             INNER JOIN  roles 
             ON users.RoleID = roles.RoleID
             ;";
@@ -24,13 +24,7 @@ class UserModel extends Crud
             return []; // Return an empty array in case of an error
         }
     }
-    public function addUser($data)
-    {
-        $tableName = 'users';
-
-        $this->create($tableName, $data);
-    }
-    public function deleteTeam($id)
+    public function deleteUser($id)
     {
         $tableName = 'users';
         $this->delete($tableName, $id);

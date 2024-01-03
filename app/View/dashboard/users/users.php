@@ -73,6 +73,7 @@
                                         <th scope="col" class="px-4 py-3">Image</th>
                                         <th scope="col" class="px-4 py-4"> UserID</th>
                                         <th scope="col" class="px-4 py-4"> Name</th>
+                                        <th scope="col" class="px-4 py-4"> Phone</th>
                                         <th scope="col" class="px-4 py-3">Adresse Email</th>
                                         <th scope="col" class="px-4 py-3">Role</th>
                                         <th scope="col" class="px-4 py-3  text-gray-400">Actions</th>
@@ -84,6 +85,7 @@
                                             <td class="px-4 py-3 text-center">Ici Image </td>
                                             <td class="px-4 py-3 text-center"><?= $user['id'] ?></td>
                                             <td class="px-4 py-3 text-center"><?= $user['Nom'] ?></td>
+                                            <td class="px-4 py-3 text-center"><?= $user['phone'] ?></td>
                                             <td class="px-4 py-3 text-center"><?= $user['AdresseEmail'] ?> </td>
                                             <td class="px-4 py-3 text-center"><?= $user['RoleType'] ?> </td>
 

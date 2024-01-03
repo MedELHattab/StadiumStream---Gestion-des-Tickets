@@ -21,7 +21,12 @@ class SigninController
             
 
             if ($user) {
+                session_start();
 
+                // Store user information in session variables
+                $_SESSION['user_id'] = $user['id']; 
+                $_SESSION['user_email'] = $user['AdresseEmail'];
+                
                 header("Location:./users");
                 exit();
             } else {

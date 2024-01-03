@@ -51,32 +51,33 @@
                     class="org-text-shadow uppercase mt-8 md:ml-8 font-bold text-black text-xs md:text-lg" style="border-bottom: 2px solid #FF6E01;">Nouveau
                     Compte</span></a></div><!----><!---->
         <div class="flex justify-center gap-4 mt-8">
-            <form class="w-full md:w-7/12 xl:w-5/12" data-gtm-form-interact-id="0">
+            <form class="w-full md:w-7/12 xl:w-5/12" data-gtm-form-interact-id="0" method="post" action="./Signup">
                 <div>
                     <div><!---->
                         <div class="mb-6 relative"><label for="email"
                                 class="opacity-40 org-text-primary sr-only">Email</label>
                             <div class="flex"><input id="email"
                                     class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
-                                    name="email" type="email" autocomplete="on" placeholder="Email *"><!----></div>
+                                    name="AdresseEmail" type="email" autocomplete="on" placeholder="Email *"><!----></div>
                             <!---->
                         </div>
                     </div>
-                    <div><!---->
-                        <div class="mb-6 relative"><label for="givenName"
-                                class="opacity-40 org-text-primary sr-only">Prénom</label>
-                            <div class="flex"><input id="givenName"
-                                    class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
-                                    name="givenName" type="text" autocomplete="on" placeholder="Prénom *"><!----></div>
-                            <!---->
-                        </div>
-                    </div>
+
                     <div><!---->
                         <div class="mb-6 relative"><label for="familyName"
                                 class="opacity-40 org-text-primary sr-only">Nom</label>
                             <div class="flex"><input id="familyName"
                                     class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
-                                    name="familyName" type="text" autocomplete="on" placeholder="Nom *"><!----></div>
+                                    name="Nom" type="text" autocomplete="on" placeholder="Nom *"><!----></div>
+                            <!---->
+                        </div>
+                    </div>
+                    <div><!---->
+                        <div class="mb-6 relative"><label for="phone"
+                                class="opacity-40 org-text-primary sr-only">Téléphone</label>
+                            <div class="flex"><input id="phone"
+                                    class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
+                                    name="phone" type="text" autocomplete="on" placeholder="phone *"><!----></div>
                             <!---->
                         </div>
                     </div>
@@ -86,7 +87,7 @@
                                 passe</label>
                             <div class="flex"><input id="password"
                                     class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
-                                    name="password" type="password" autocomplete="off"
+                                    name="MotDePasse" type="password" autocomplete="off"
                                     placeholder="Mot de passe *"><button type="button"
                                     class="border-b border-gray-400 focus:outline-none"><!----><svg
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -117,31 +118,6 @@
                                     </svg></button></div><!---->
                         </div>
                     </div>
-                    <div><!---->
-                        <div class="mb-6 relative"><label for="street1"
-                                class="opacity-40 org-text-primary sr-only">Adresse</label>
-                            <div class="flex"><input id="street1"
-                                    class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
-                                    name="street1" type="text" autocomplete="on" placeholder="Adresse *"><!----></div>
-                            <!---->
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mb-6 relative" type="tel"><label for="phoneNumber"
-                                class="opacity-40 org-text-primary sr-only">Téléphone</label>
-                            <div class="flex gap-x-2"><button type="button" class="flex w-10 bg-red500"><!----><span
-                                        class="text-base">🇨🇮</span><span class="mt-1.5 ml-auto"><svg
-                                            stroke="currentColor" fill="currentColor" stroke-width="0"
-                                            viewBox="0 0 24 24" height="1em" width="1em"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path d="M7 10l5 5 5-5z"></path>
-                                        </svg></span></button><input id="phoneNumber"
-                                    class="text-base md:text-sm border-b w-full focus:outline-none border-gray-400 text-gray-700 placeholder-gray-800"
-                                    name="phoneNumber" type="tel" autocomplete="on" aria-invalid=""
-                                    placeholder="Téléphone *"></div><span class="text-red-500"></span><!---->
-                        </div><!---->
-                    </div><!---->
                     <div class="flex gap-x-2 text-xs mb-4 org-text-primary"><input type="checkbox"
                             data-gtm-form-interact-field-id="0">
                         <div class="flex flex-col gap-x-2">
@@ -151,7 +127,7 @@
                                     conditions d'utilisation </a> et la politique de confidentialité </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-y-4 items-center justify-center mt-8"><button type="submit" name="signup" class="bg-[#004634] text-white font-bold py-2 px-4 border rounded" style="background-color: #004634;">
+                    <div class="flex flex-col gap-y-4 items-center justify-center mt-8"><button type="submit"  class="bg-[#004634] text-white font-bold py-2 px-4 border rounded" style="background-color: #004634;">
             S'inscrire
         </button>
 </div>

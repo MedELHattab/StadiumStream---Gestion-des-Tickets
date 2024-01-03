@@ -31,20 +31,20 @@ class Crud extends Connection
 
 
     public function create($tableName, $data)
-    {
-        try {
-            $columns = implode(", ", array_keys($data));
-            $values = ":" . implode(", :", array_keys($data));
+{
+    try {
+        $columns = implode(", ", array_diff(array_keys($data), ['id']));
+        $values = ":" . implode(", :", array_diff(array_keys($data), ['id']));
 
-            $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
-            $stmt = $this->pdo->prepare($query);
-            $stmt->execute($data);
+        $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($data);
 
-            echo "Record added successfully!";
-        } catch (PDOException $e) {
-            echo "Error creating record: " . $e->getMessage();
-        }
+        echo "Record added successfully!";
+    } catch (PDOException $e) {
+        echo "Error creating record: " . $e->getMessage();
     }
+}
 
     public function update($tableName, $data, $id)
     {

@@ -9,19 +9,14 @@ class StadiumModel extends Crud
 {
     public function readTeam()
     {
-        return $this->read('Stades');
+        return $this->read('stades');
     }
     
     public function addStadium($data)
     {
-     $tableName = 'Stades';
-
+     $tableName = 'stades';
+     var_dump($data);
     $this->create($tableName, $data);
  }
-    // public function deleteTeam($id)
-    // {
-    //     $tableName = 'EquipesNationales';
-    //     $this->delete($tableName, $id);
-    //     header('Location: ');
-    // }
+    
 }

@@ -7,6 +7,8 @@ use PDOException;
 
 class UserModel extends Crud
 {
+     
+    private $userData = [];
     public function readUser()
     {
         try {
@@ -18,19 +20,33 @@ class UserModel extends Crud
 
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            return $records; // Return the fetched records
+            return $records; 
         } catch (PDOException $e) {
             echo "Error fetching records: " . $e->getMessage();
-            return []; // Return an empty array in case of an error
+            return []; 
         }
     }
     
-    // public function addTeam($data)
-    // {
-    //     $tableName = 'EquipesNationales';
+    public function updateProfil($newData) {
+        $this->userData['UserID'] = $newData['UserID'];
+        $this->userData['Nom'] = $newData['Nom'];
+        $this->userData['AdresseEmail'] = $newData['AdresseEmail'];
+        $this->userData['MotDePasse'] = $newData['MotDePasse'];
+        $this->userData['Image'] = $newData['Image'];
+        // $this->userData['RoleID'] = $newData['RoleID'];
 
-    //     $this->create($tableName, $data);
-    // }
+       parent::update('users', $this->userData, $newData['UserID']);
+}
+    
+    public function update($tableName, $data, $id)
+    {
+        $tableName = 'users';
+
+        $this->update($tableName, $this->userData);
+    }
+    public function esc($value) {
+        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+    }
     // public function deleteTeam($id)
     // {
     //     $tableName = 'EquipesNationales';

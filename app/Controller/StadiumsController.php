@@ -13,3 +13,4 @@ class StadiumsController
         include "../app/View/dashboard/stadiums/stadiums.php";
     }
 }
+

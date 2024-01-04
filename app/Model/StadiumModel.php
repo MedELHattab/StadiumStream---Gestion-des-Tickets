@@ -7,7 +7,7 @@ use PDOException;
 
 class StadiumModel extends Crud
 {
-    public function readTeam()
+    public function readStadium()
     {
         return $this->read('Stades');
     }

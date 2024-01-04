@@ -10,7 +10,7 @@ class SignupModel extends Crud
     {
         $tableName = 'users';
         try{
- $this->create($tableName, $data);
+ $this->signuser($tableName, $data);
         return true;
         }catch(PDOException $e){
             

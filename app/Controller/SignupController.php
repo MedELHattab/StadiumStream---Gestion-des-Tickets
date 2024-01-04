@@ -10,10 +10,10 @@ class SignupController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Retrieve form data
-            $email = $_POST["AdresseEmail"];
-            $name = $_POST["Nom"];
-            $phone = $_POST["phone"];
-            $password = password_hash($_POST["MotDePasse"], PASSWORD_DEFAULT); // Hash the password
+            $email = filter_var($_POST["AdresseEmail"], FILTER_VALIDATE_EMAIL);
+            $name = htmlspecialchars($_POST["Nom"]);
+            $phone = htmlspecialchars($_POST["phone"]);
+            $password = password_hash($_POST["MotDePasse"], PASSWORD_DEFAULT);
 
             // Create an instance of SignupModel
             $signupModel = new SignupModel();

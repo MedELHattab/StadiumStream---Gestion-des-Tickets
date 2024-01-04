@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .conatct-gradiant {
+    background: rgb(13, 75, 51);
+    background: linear-gradient(
+        140deg,
+        rgba(13, 75, 51, 0.95) 30%,
+        rgba(201, 73, 0, 0.98) 95%
+      ),
+      url("../../public/assets/images/contact_bg.png");
+    background-size: cover;
+  }
+  .signin-gradient {
+    background: rgb(13, 75, 51);
+    background: linear-gradient(
+        42deg,
+        rgba(13, 75, 51, 0.98) 10%,
+        rgba(13, 75, 51, 0.95) 28%,
+        rgba(201, 73, 0, 0.95) 94%,
+        rgba(201, 73, 0, 0.98) 90%
+      ),
+      url("../../public/assets/images/signin_bg.png");
+    background-size: cover;
+  }
+  .signup-gradient {
+    background: rgb(13, 75, 51);
+    background: linear-gradient(
+        142deg,
+        rgba(13, 75, 51, 0.98) 10%,
+        rgba(13, 75, 51, 0.95) 28%,
+        rgba(201, 73, 0, 0.95) 94%,
+        rgba(201, 73, 0, 0.98) 90%
+      ),
+      url("../../public/assets/images/signup_bg.jpg");
+    background-size: cover;
+  }
+  .orange-shape {
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .green-shape {
+    width: 100px;
+    height: 230px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+  .pyramid {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 60%;
+    left: -1%;
+  }
+  .ellipse {
+    position: absolute;
+    right: 0;
+    top: 65%;
+  }
+  .yellow-shape {
+    width: 150px;
+    height: 180px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+@layer components{
+    .customgradient{
+        background: rgb(13,75,51);
+        background: linear-gradient(42deg, rgba(13,75,51,0.98) 10%, rgba(13,75,51,0.95) 38%, rgba(201,73,0,0.95) 64%, rgba(201,73,0,0.98) 90%);
+    }
+}

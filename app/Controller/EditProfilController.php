@@ -21,18 +21,29 @@ class EditProfilController
                 'Nom' => $_POST['Nom'],
                 'AdresseEmail' => $_POST['AdresseEmail'],
                 'MotDePasse' => $_POST['MotDePasse'],
-                'Image' => $_FILE['Image'],
+                'Image' => $_FILES['Image'],
                 'RoleID' => $_POST['RoleID'],
             ];
 
             $userModel->updateProfil($newData);
 
-            $view = new UserProfileView();
-            $view->showConfirmation();
+            echo "Profil mis à jour avec succès!";
         } else {
             $userData = $userModel->getUserData();
-            $view = new UserProfileView();
-            $view->showForm($userData);
+
+            
+            include '../app/View/EditProfil.php';
         }
     }
+    public function deleteProfil($Id)
+    {
+        $userModel = new UserModel($Id);
+
+        
+        $userModel->delete($Id);
+
+        header('Location: index.php');
+        exit();
+    }
 }
+

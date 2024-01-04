@@ -1,13 +1,16 @@
 <?php
-
 namespace App\Controller;
+use App\Model\StadiumModel;
 
 class AddStadiumController
 {
     public function index()
     {
+        $stadiums = new StadiumModel();
+        $stadiums = $stadiums->readTeam();
         include "../app/View/dashboard/stadiums/stadiums.php";
     }
+
     public function create()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -27,8 +30,9 @@ class AddStadiumController
 
             $stad->addStadium($data);
 
-            header('Location: ../Stadium');
+            header('Location: ../stadiums');
             exit();   
         }
     }
 }
+

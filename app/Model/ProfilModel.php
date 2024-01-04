@@ -14,8 +14,7 @@ class ProfilModel
             'Nom' => 'Nom',
             'AdresseEmail' => 'AdresseEmail',
             'MotDePasse' => 'MotDePasse',
-            'Image'=>'Image',
-            'RoleID'=>'RoleID'
+            'Image' => 'Image',
         ];
     }
 
@@ -26,10 +25,40 @@ class ProfilModel
     public function updateProfil($newData) {
         $this->userData['UserID'] = $newData['UserID'];
         $this->userData['Nom'] = $newData['Nom'];
-        $this->userData['AsresseEmail'] = $newData['AsresseEmail'];
+        $this->userData['AdresseEmail'] = $newData['AsresseEmail'];
         $this->userData['MotDePasse'] = $newData['MotDePasse'];
         $this->userData['Image'] = $newData['Image'];
-        $this->userData['RoleID'] = $newData['RoleID'];
+        // $this->userData['RoleID'] = $newData['RoleID'];
 
     }
+
+public function deleteProfil()
+{
+    return $this->deleteUserFromDatabase($this->userData['UserID']);
+}
+
+private function deleteUser($userId)
+{
+    $database = [
+        [
+            'UserID' => 'UserID',
+            'Nom' => 'Nom',
+            'AdresseEmail' => 'AdresseEmail',
+            'MotDePasse' => 'MotDePasse',
+            'Image' => 'Image',
+        ],
+    ];
+
+    
+    $key = array_search($userId, array_column($database, 'UserID'));
+
+    
+    if ($key !== false) {
+        unset($database[$key]);
+        return true; 
+    }
+
+    return false; 
+}
+
 }

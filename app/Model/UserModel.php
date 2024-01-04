@@ -33,7 +33,7 @@ class UserModel extends Crud
         $this->userData['AdresseEmail'] = $newData['AdresseEmail'];
         $this->userData['MotDePasse'] = $newData['MotDePasse'];
         $this->userData['Image'] = $newData['Image'];
-        // $this->userData['RoleID'] = $newData['RoleID'];
+        $this->userData['RoleID'] = $newData['RoleID'];
 
        parent::update('users', $this->userData, $newData['UserID']);
 }
@@ -47,10 +47,11 @@ class UserModel extends Crud
     public function esc($value) {
         return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
     }
-    // public function deleteTeam($id)
-    // {
-    //     $tableName = 'EquipesNationales';
-    //     $this->delete($tableName, $id);
-    //     header('Location: ');
-    // }
+
+    public function deleteTeam($id)
+    {
+        $tableName = 'users';
+        $this->delete($tableName, $id);
+        header('Location:stadiums ');
+    }
 }

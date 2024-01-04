@@ -15,7 +15,7 @@ class StadiumModel extends Crud
     public function addStadium($data)
     {
      $tableName = 'stades';
-     var_dump($data);
+    //  var_dump($data);
     $this->create($tableName, $data);
  }
     

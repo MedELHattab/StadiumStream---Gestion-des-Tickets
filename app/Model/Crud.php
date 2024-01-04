@@ -39,48 +39,33 @@ class Crud extends Connection
             $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
             $stmt = $this->pdo->prepare($query);
             $stmt->execute($data);
-
             echo "Record added successfully!";
         } catch (PDOException $e) {
             echo "Error creating record: " . $e->getMessage();
         }
     }
-
     public function update($tableName, $data, $id)
     {
-        try {
-            $update_arr = [];
-            foreach ($data as $column => $value) {
-                $update_arr[] = "$column = :$column";
-            }
-            $update_arr = implode(", ", $update_arr);
-            // $query = "UPDATE $tableName SET $update_arr WHERE id = :id";
-            
-            $query =  "UPDATE equipesnationales  SET NomEquipe = :NEquipe, Entraîneur = :Entraineur, NombreJoueurs = :NJoueurs WHERE id = :id";
-       
-      
+            try {
+                $update_arr = [];
+                foreach ($data as $column => $value) {
+                    $update_arr[] = "$column = :$column";
+                }
+                $update_arr = implode(", ", $update_arr);
+                 $data['id'] = $id;
 
-// dump($update_arr);die();
+    
+                $query = "UPDATE $tableName SET $update_arr WHERE id= :id";
+                
+                $stmt = $this->pdo->prepare($query);
+                $stmt->execute($data);
 
-            $data['id'] = $id;
-
-            $stmt = $this->pdo->prepare($query);
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-            $stmt->bindParam(':NEquipe', $data['NomEquipe']);
-            $stmt->bindParam(':Entraineur', $data['Entraîneur']);
-            $stmt->bindParam(':NJoueurs',$data['NombreJoueurs'], PDO::PARAM_INT);
-        
-            $stmt->execute();
-            if ($stmt->execute()) {
-                echo 'The publisher has been updated successfully!';
-            }
-
-            echo "Record updated successfully!";
-        } catch (PDOException $e) {
-            echo "Error updating record: " . $e->getMessage();
-        }
+    
+                echo "Record updated successfully!";
+                } catch (PDOException $e) {
+                    echo "Error updating record: " . $e->getMessage();
+                }
     }
-
     public function delete($tableName, $id)
     {
         try {

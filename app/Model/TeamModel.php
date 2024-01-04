@@ -41,7 +41,6 @@ public function deleteTeam($id)
         try {
             $pdo = new PDO($dsn, $username, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
             $query = $pdo->prepare("SELECT * FROM EquipesNationales WHERE id = :id");
             $query->execute(['id' => $id]);
     
@@ -67,7 +66,13 @@ public function deleteTeam($id)
     //     // header('Location: ../../teams');
     // }
 
-    
+    // public function editTeams($data, $id)
+    // {
+    //     $tableName = 'equipesnationales';
+    //     $redirect = URL_DIR . 'teams';
+    //     $this->update($tableName, $data, $id);
+    //     header("Location: $redirect");
+    // }
     
 }
 

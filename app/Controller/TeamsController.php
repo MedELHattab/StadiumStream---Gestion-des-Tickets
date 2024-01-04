@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-class TeamsController
+class TeamsController 
 {
     public function index()
     {
@@ -41,6 +41,8 @@ class TeamsController
         $teams->editteam('EquipesNationales', $_POST, $id);
         header('../app/View/dashboard/teams');
     }
+
+
 
 //     public function editTeam()
 // {

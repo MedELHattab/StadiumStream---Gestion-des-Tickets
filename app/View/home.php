@@ -122,26 +122,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                        <div class="rounded-lg h-64 overflow-hidden">
-                            <img alt="content" class="object-cover object-center h-full w-full" src="public/assets/images/AFCON-2022.jpg" />
-                        </div>
-                        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">
-                            Shooting Stars
-                        </h2>
-                        <p class="text-base leading-relaxed mt-2 dark:text-white">
-                            Swag shoivdigoitch literally meditation subway tile tumblr
-                            cold-pressed. Gastropub street art beard dreamcatcher neutra,
-                            ethical XOXO lumbersexual.
-                        </p>
-                        <a class="text-green-500 inline-flex items-center mt-3">Learn More
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+
+                <?php
+// Assuming $matches is retrieved correctly from the database
+
+// Check if $matches is not empty and is an array
+
+    foreach ($matches as $match) {
+?>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+            <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                <div class="rounded-lg h-64 overflow-hidden">
+                    <!-- Assuming $match['Image'] contains the image source -->
+                    <img alt="content" class="object-cover object-center h-full w-full" src="<?= $match['Image'] ?>" />
+                </div>
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">
+                    <?= $match['EquipeDomicileID'] ?> VS <?= $match['EquipeExterieurID'] ?>
+                </h2>
+                <p class="text-base leading-relaxed mt-2 dark:text-white">
+                    <!-- Sample text, replace with actual match details -->
+                    Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.
+                </p>
+                <!-- Assuming the link should direct to the match ID -->
+                <a href="home\index\<?= $match['MatchID'] ?>" class="text-green-500 inline-flex items-center mt-3">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+<?php
+    }
+?>
+
+                    <!-- <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-64 overflow-hidden">
                             <img alt="content" class="object-cover object-center h-full w-full" src="public/assets/images/AFCON-2022.jpg" />
                         </div>
@@ -158,8 +171,8 @@
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                    </div>
-                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    </div> -->
+                    <!-- <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
                         <div class="rounded-lg h-64 overflow-hidden">
                             <img alt="content" class="object-cover object-center h-full w-full" src="public/assets/images/AFCON-2022.jpg" />
                         </div>
@@ -176,7 +189,7 @@
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="flex flex-col px-5 pt-24 mx-auto">

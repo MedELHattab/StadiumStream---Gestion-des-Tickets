@@ -2,8 +2,7 @@
 namespace App\Controller;
 class EditstadiumController{
     public function index(){
-        include "../app/View/dashboard/editstadium.php";
-    }
+        include "../app/View/dashboard/stadiums/editstadium.php";    }
     public function editstadium($tableName, $data, $id)
  {
  

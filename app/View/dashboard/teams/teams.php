@@ -84,7 +84,7 @@
                                             <td class="px-4 py-3 text-center">Ici Image </td>
                                             <td class="px-4 py-3 text-center"><?= $team['id'] ?></td>
                                             <td class="px-4 py-3 text-center"><?= $team['NomEquipe'] ?></td>
-                                            <td class="px-4 py-3 text-center"><?= $team['Entraîneur'] ?> </td>
+                                            <td class="px-4 py-3 text-center"><?= $team['Entraineur'] ?> </td>
                                             <td class="px-4 py-3 text-center"><?= $team['NombreJoueurs'] ?> </td>
 
                                             <td class="px-4 py-3 text-center  ">
